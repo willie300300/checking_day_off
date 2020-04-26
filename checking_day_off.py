@@ -43,8 +43,8 @@ def checking(name):
             if everyone_2[name][count_2] != None:
                 print(x, '號')
                 print('錯誤') 
-        if everyone_2[name][count_2] != None:
-            if everyone[name][count_1] == 24:
+        if everyone_2[name][count_2] == None:
+            if everyone[name][count_1] != 24:
                 print(x, '號')
                 print('錯誤')
         #檢查休假整天(▲)，要把整天的都改成「▲」三角形
@@ -52,8 +52,8 @@ def checking(name):
             if everyone_2[name][count_2] != '▲':
                 print(x, '號')
                 print('錯誤') 
-        if everyone_2[name][count_2] != '▲':
-            if everyone[name][count_1] == 0:
+        if everyone_2[name][count_2] == '▲':
+            if everyone[name][count_1] != 0:
                 print(x, '號')
                 print('錯誤')
         #檢查外宿(○)
@@ -61,8 +61,8 @@ def checking(name):
             if everyone_2[name][count_2] != '○':
                 print(x, '號')
                 print('錯誤') 
-        if everyone_2[name][count_2] != '○':
-            if everyone[name][count_1] == 10:
+        if everyone_2[name][count_2] == '○':
+            if everyone[name][count_1] != 10:
                 print(x, '號')
                 print('錯誤')
         #檢查日休(●)
@@ -70,8 +70,8 @@ def checking(name):
             if everyone_2[name][count_2] != '●':
                 print(x, '號')
                 print('錯誤') 
-        if everyone_2[name][count_2] != '●':
-            if everyone[name][count_1] == 14:
+        if everyone_2[name][count_2] == '●':
+            if everyone[name][count_1] != 14:
                 print(x, '號')
                 print('錯誤')                
 
