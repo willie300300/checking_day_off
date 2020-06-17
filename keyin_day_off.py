@@ -3,19 +3,13 @@ import openpyxl
 import time
 
 
-
-
-
-
-
-
-
 class Combination(object):
     def __init__(self):
-        # self.open_chrome()
-        # self.open_web()
-        # self.drop_down_menu()
-        pass
+        self.open_chrome()
+        self.open_web()
+        self.drop_down_menu("/html/body/main/div/section/div/div[1]/article/div[1]/form/div[1]/select[1]/option[118]")
+        self.open_excel()
+        # pass
 
     def open_chrome(self):
         #開啟瀏覽器
@@ -28,9 +22,9 @@ class Combination(object):
         # print("sleep 5 seconds.")
         # time.sleep(5)
 
-    def drop_down_menu(self):
+    def drop_down_menu(self,xpath):
         #選擇選單，直接貼上要選的東西的XPATH
-        self.browser.find_element_by_xpath("/html/body/main/div/section/div/div[1]/article/div[1]/form/div[1]/select[1]/option[118]").click()
+        self.browser.find_element_by_xpath(xpath).click()
 
     def open_excel(self):
         #打開EXCEL
@@ -48,14 +42,45 @@ class Combination(object):
                 self.everyone_2[i[1]] = i
                 self.names.append(i[1])
 
-        print(self.names)
-        print(self.everyone_2)
+        # print(self.names)
+        # print(self.everyone_2)
+
+    def keyin_data(self):   
+        for name in self.names:
+            print('正在檢查', name)
+            x = 0
+            while x < 31:
+                x = x + 1
+                count = x + 1
+
+                #登打上班日(空格)
+                if self.everyone_2[name][count] == None:
+                    pass
+
+                #登打休假整天(▲)，要把整天的都改成「▲」三角形
+                if self.everyone_2[name][count] == '▲':
+                    pass
+                    self.drop_down_menu(xpath)
+
+                #登打外宿(○)
+                if self.everyone_2[name][count] == '○':
+                    pass
+                    self.drop_down_menu(xpath)
+
+                #登打日休(●)
+                if self.everyone_2[name][count] == '●':
+                    pass
+                    self.drop_down_menu(xpath)                
+
+
+
 
 
 
 s = Combination()
 s.open_excel()
-
+print(s.names)
+print(s.everyone_2)
 
 
 
