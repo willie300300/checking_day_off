@@ -1,7 +1,7 @@
 import openpyxl
 
 #打開EXCEL
-wb = openpyxl.load_workbook('109年04月(10904212122).xlsx')
+wb = openpyxl.load_workbook('109年05月(以此版本為主)(1090521-1308).xlsx')
 
 #打開工作表
 sheet = wb['工作表3']
@@ -34,7 +34,7 @@ for i in data_2:
 def checking(name):
     print('正在檢查',name)
     x = 0
-    while x < 30:
+    while x < 31:
         x = x + 1
         count_1 = x + 5
         count_2 = x + 1
