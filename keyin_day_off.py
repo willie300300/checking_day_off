@@ -1,24 +1,5 @@
 from selenium import webdriver
 
-import time
-import datetime
-from selenium import webdriver
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.webdriver.common.keys import Keys
-from contextlib import contextmanager
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.expected_conditions import \
-    staleness_of
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
-from selenium.common.exceptions import StaleElementReferenceException, ElementNotInteractableException, \
-    ElementClickInterceptedException
-from selenium.webdriver.chrome.options import Options
-from helper_class import wait_for_page_load
-from pprint import pprint
-import json
 
 
 
